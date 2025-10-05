@@ -13,6 +13,16 @@ app.get('/tasks', (req, res) => {
     res.status(200).json(tasks);
 });
 
+app.post('/tasks', (req, res) => {
+    const { titulo, descricao } = req.body;
+    if (!titulo) {
+        return res.status(400).json({ error: "O título é obrigatório." });
+    }
+    const newTask = { id: nextId++, titulo, descricao: descricao || '', status: "não finalizado" };
+    tasks.push(newTask);
+    res.status(201).json(newTask);
+});
+
 app.get('/', (req, res) => {
     res.send('API de To-Do List rodando!');
 });
