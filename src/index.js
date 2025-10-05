@@ -32,9 +32,10 @@ app.delete('/tasks/:id', (req, res) => {
     const initialLength = tasks.length;
     tasks = tasks.filter(t => t.id !== taskId);
     if (tasks.length === initialLength) {
-        return res.status(404).json({ message: "Task not found" });
+        return res.status(404).json({ message: "Tarefa não encontrada" });
     }
-    res.status(200).json({ message: "Task deleted successfully" });
+    res.status(200).json({ message: "Taefa deletada corretamente" });
+    console.log("Validando conflito!!")
 });
 
 app.listen(port, () => {
