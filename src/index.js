@@ -10,8 +10,9 @@ let tasks = [
 ];
 let nextId = 2;
 
+// Rota para listar todas as tarefas existentes na lista
 app.get('/tasks', (req, res) => {
-    res.status(200).json(tasks);
+    res.send('API de To-Do List v3.0 - Operacional');
 });
 
 app.post('/tasks', (req, res) => {
