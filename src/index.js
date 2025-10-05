@@ -21,7 +21,7 @@ app.post('/tasks', (req, res) => {
     }
     const newTask = { id: nextId++, titulo, descricao: descricao || '', status: "não finalizado" };
     tasks.push(newTask);
-    res.status(201).json(newTask);
+    res.status(201).json({ id: newTask.id });
 });
 
 app.get('/', (req, res) => {
