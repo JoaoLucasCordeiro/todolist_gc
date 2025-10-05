@@ -1,4 +1,4 @@
-# RELATÓRIO DE PROJETO - Estratégias de Branching em Git
+# RELATÓRIO DE PROJETO - TO DO LIST GERÊNCIA DE CONFIGURAÇÃO
 
 ## Identificação
 
