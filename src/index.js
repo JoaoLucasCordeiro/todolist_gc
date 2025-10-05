@@ -35,6 +35,7 @@ app.delete('/tasks/:id', (req, res) => {
         return res.status(404).json({ message: "Task not found" });
     }
     res.status(200).json({ message: "Task deleted successfully" });
+    console.log("Conflito aqui!!")
 });
 
 app.listen(port, () => {
