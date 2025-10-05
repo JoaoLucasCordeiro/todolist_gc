@@ -28,13 +28,13 @@ app.get('/', (req, res) => {
 });
 
 app.delete('/tasks/:id', (req, res) => {
-    const id = parseInt(req.params.id);
-    const taskIndex = tasks.findIndex(t => t.id === id);
-    if (taskIndex === -1) {
-        return res.status(404).send('Tarefa não encontrada.');
+    const taskId = parseInt(req.params.id);
+    const initialLength = tasks.length;
+    tasks = tasks.filter(t => t.id !== taskId);
+    if (tasks.length === initialLength) {
+        return res.status(404).json({ message: "Task not found" });
     }
-    tasks.splice(taskIndex, 1);
-    res.status(204).send();
+    res.status(200).json({ message: "Task deleted successfully" });
 });
 
 app.listen(port, () => {
