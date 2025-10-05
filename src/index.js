@@ -38,6 +38,20 @@ app.delete('/tasks/:id', (req, res) => {
     console.log("Validando conflito!!")
 });
 
+app.patch('/tasks/:id', (req, res) => {
+    const id = parseInt(req.params.id);
+    const task = tasks.find(t => t.id === id);
+    if (!task) {
+        return res.status(404).send('Tarefa não encontrada.');
+    }
+    const { status } = req.body;
+    if (status) {
+        task.status = status;
+    }
+    res.status(200).json(task);
+});
+
+
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
 });
