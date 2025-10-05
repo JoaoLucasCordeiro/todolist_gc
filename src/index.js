@@ -27,6 +27,16 @@ app.get('/', (req, res) => {
     res.send('API de To-Do List rodando!');
 });
 
+app.delete('/tasks/:id', (req, res) => {
+    const id = parseInt(req.params.id);
+    const taskIndex = tasks.findIndex(t => t.id === id);
+    if (taskIndex === -1) {
+        return res.status(404).send('Tarefa não encontrada.');
+    }
+    tasks.splice(taskIndex, 1);
+    res.status(204).send();
+});
+
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
 });
