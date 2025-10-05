@@ -17,7 +17,7 @@ app.get('/tasks', (req, res) => {
 app.post('/tasks', (req, res) => {
     const { titulo, descricao } = req.body;
     if (!titulo) {
-        return res.status(400).json({ error: "O título é obrigatório." });
+        return res.status(400).json({ message: "O campo 'titulo' é obrigatório para criar uma tarefa." });
     }
     const newTask = { id: nextId++, titulo, descricao: descricao || '', status: "não finalizado" };
     tasks.push(newTask);
