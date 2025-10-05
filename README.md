@@ -122,3 +122,13 @@ Por outro lado, o Trunk-Based Development nos proporcionou um ciclo de feedback 
 Em suma, a eficiência de cada estratégia depende do contexto. Para um projeto universitário, ágil e com uma equipe pequena como a nossa, a simplicidade e a velocidade do Trunk-Based Development superaram a segurança e a estrutura formal do Git Flow.
 
 ## Evidências (prints)
+
+
+<img width="1151" height="406" alt="Image" src="https://github.com/user-attachments/assets/d187862d-ea65-46fd-bb77-965d7e47c9e1" />
+
+<img width="1279" height="582" alt="Image" src="https://github.com/user-attachments/assets/7a283d51-7a5b-485f-ab13-28706a0845f5" />
+
+<img width="1340" height="796" alt="Image" src="https://github.com/user-attachments/assets/18bd96d5-65b4-4c6b-9aef-88a8287342cf" />
+
+![Image](https://github.com/user-attachments/assets/17d2076d-d6d6-4fb9-a6ee-89877df45c7c)
+
